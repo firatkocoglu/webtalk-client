@@ -5,7 +5,7 @@ import axios from 'axios';
 import Loading from './Loading';
 
 const Visits = () => {
-  const visits_url = 'http://localhost:8000/api/visits';
+  const visits_url = 'http://52.28.57.99:8000/api/visits';
 
   const { session, setNotification } = useContext(GlobalContext);
 

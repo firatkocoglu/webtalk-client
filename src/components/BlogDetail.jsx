@@ -33,7 +33,7 @@ const BlogDetail = () => {
 
   const { blogID } = useParams();
 
-  const blog_url = `http://localhost:8000/api/blogs/${blogID}`;
+  const blog_url = `http://52.28.57.99:8000/api/blogs/${blogID}`;
 
   const { title, content, user, category, date } = blog;
 

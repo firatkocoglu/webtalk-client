@@ -6,7 +6,7 @@ import { GlobalContext } from '../context/Context';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 
-const logout_url = 'http://localhost:8000/api/logout/';
+const logout_url = 'http://52.28.57.99:8000/api/logout/';
 
 const Navbar = () => {
   const { session, setSession, user, setUser, setFilteredBlogs, navigation } =

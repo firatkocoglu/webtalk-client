@@ -7,7 +7,7 @@ import Cookie from 'universal-cookie';
 import { HiUser } from 'react-icons/hi2';
 import { RiLockPasswordFill } from 'react-icons/ri';
 
-const login_url = 'http://3.76.217.40:8000/api/login/';
+const login_url = 'http://52.28.57.99:8000/api/login/';
 
 //LOGIN VIEW
 const Login = () => {
@@ -33,6 +33,7 @@ const Login = () => {
   }, []);
 
   const sendCredentials = async () => {
+    console.log('fro');
     await axios
       .post(
         login_url,

@@ -32,7 +32,7 @@ export function BlogCard({ id, title, content, user, category, date }) {
         </h1>
         <div className='author'>
           <img
-            src={`http://127.0.0.1:8000${avatar}`}
+            src={`http://52.28.57.99:8000${avatar}`}
             alt='web-talk-avatar'
             className='avatar'
           />

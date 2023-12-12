@@ -5,7 +5,7 @@ import { HiUser } from 'react-icons/hi2';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { BsEnvelopeAtFill } from 'react-icons/bs';
 
-const register_url = 'http://localhost:8000/auth/users/';
+const register_url = 'http://52.28.57.99:8000/auth/users/';
 
 const Register = () => {
   const [credentials, setCredentials] = useState({

@@ -28,7 +28,7 @@ export default function Search() {
 
     try {
       window.localStorage.setItem('searchQuery', searchText);
-      fetchBlogs(`http://localhost:8000/api/blogs/?search=${searchText}`);
+      fetchBlogs(`http://52.28.57.99:8000/api/blogs/?search=${searchText}`);
       navigation(`/search`);
     } catch (error) {
       console.log(error);

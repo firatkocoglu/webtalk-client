@@ -40,7 +40,7 @@ const defaultState = {
   blogs: [],
   savedBlogs: [],
   hasMore: true,
-  nextPage: `http://localhost:8000/api/blogs?page=1`,
+  nextPage: `http://52.28.57.99:8000/api/blogs?page=1`,
   searchResults: [],
   drafts: [],
   published: [],
@@ -65,7 +65,7 @@ export const GlobalContextProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/getuser/', {
+      const response = await axios.get('http://52.28.57.99:8000/api/getuser/', {
         withCredentials: true,
         headers: {
           'X-CSRFToken': state.session,
@@ -110,7 +110,7 @@ export const GlobalContextProvider = ({ children }) => {
   const fetchSavedBlogs = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:8000/api/savedblogs/',
+        'http://52.28.57.99:8000/api/savedblogs/',
         {
           withCredentials: true,
           headers: {
@@ -127,7 +127,7 @@ export const GlobalContextProvider = ({ children }) => {
   const saveBlog = async (id) => {
     try {
       await axios.post(
-        'http://localhost:8000/api/savedblogs/',
+        'http://52.28.57.99:8000/api/savedblogs/',
         {
           blog_id: id,
         },
@@ -149,7 +149,7 @@ export const GlobalContextProvider = ({ children }) => {
 
   const deleteSavedBlog = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/savedblogs/${id}/`, {
+      await axios.delete(`http://52.28.57.99:8000/api/savedblogs/${id}/`, {
         withCredentials: true,
         headers: {
           'X-CSRFToken': state.session,

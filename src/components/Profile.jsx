@@ -51,7 +51,7 @@ const Profile = () => {
 
   const deleteAvatarHandler = async () => {
     try {
-      await axios.get('http://localhost:8000/api/deleteavatar/', {
+      await axios.get('http://52.28.57.99:8000/api/deleteavatar/', {
         withCredentials: true,
       });
       //RESET AVATAR PICTURE FILE UPLOAD
@@ -72,7 +72,7 @@ const Profile = () => {
 
     try {
       await axios.patch(
-        'http://localhost:8000/api/updateuser/',
+        'http://52.28.57.99:8000/api/updateuser/',
         {
           ...data,
         },

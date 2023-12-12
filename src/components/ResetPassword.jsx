@@ -19,7 +19,7 @@ const ResetPassword = () => {
         message: `Reset password email has been sent to ${email}. Please check your mail box.`,
       });
       const response = await axios.post(
-        'http://localhost:8000/auth/users/reset_password/',
+        'http://52.28.57.99:8000/auth/users/reset_password/',
         {
           email: email,
         }

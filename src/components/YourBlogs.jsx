@@ -37,7 +37,7 @@ const YourBlogs = () => {
   }, [isModalOpen]);
 
   const fetchDrafts = async () => {
-    const response = await axios.get('http://localhost:8000/api/drafts/', {
+    const response = await axios.get('http://52.28.57.99:8000/api/drafts/', {
       withCredentials: true,
       headers: {
         'X-CSRFToken': session,
@@ -49,7 +49,7 @@ const YourBlogs = () => {
 
   const fetchAllBlogs = async () => {
     const response = await axios.get(
-      'http://localhost:8000/api/blogs/?by_user&no_page',
+      'http://52.28.57.99:8000/api/blogs/?by_user&no_page',
       {
         withCredentials: true,
         headers: {
@@ -69,7 +69,7 @@ const YourBlogs = () => {
 
   const deleteDraft = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/drafts/${id}/`, {
+      await axios.delete(`http://52.28.57.99:8000/api/drafts/${id}/`, {
         withCredentials: true,
         headers: { 'X-CSRFToken': session },
       });
@@ -86,7 +86,7 @@ const YourBlogs = () => {
 
   const deleteBlog = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/blogs/${id}/`, {
+      await axios.delete(`http://52.28.57.99:8000/api/blogs/${id}/`, {
         withCredentials: true,
         headers: { 'X-CSRFToken': session },
       });

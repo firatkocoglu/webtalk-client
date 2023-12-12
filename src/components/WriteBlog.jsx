@@ -41,7 +41,7 @@ const WriteBlog = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:8000/api/categories/',
+        'http://52.28.57.99:8000/api/categories/',
         {
           withCredentials: true,
           headers: { 'X-CSRFToken': session },
@@ -57,7 +57,7 @@ const WriteBlog = () => {
     console.log(content);
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/blogs/',
+        'http://52.28.57.99:8000/api/blogs/',
         {
           user_id: user.id,
           title: title,
@@ -90,7 +90,7 @@ const WriteBlog = () => {
     console.log(content);
     try {
       await axios.post(
-        'http://localhost:8000/api/drafts/',
+        'http://52.28.57.99:8000/api/drafts/',
         {
           user_id: user.id,
           title: title,
@@ -144,10 +144,7 @@ const WriteBlog = () => {
               <label htmlFor='content'>
                 <strong>Content</strong>
               </label>
-              <Editor
-                fields={fields}
-                handleFieldChanges={handleFieldChanges}
-              />
+              <Editor fields={fields} handleFieldChanges={handleFieldChanges} />
             </div>
             <div className='form-input'>
               <label htmlFor='category_id'>

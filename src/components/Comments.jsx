@@ -10,7 +10,7 @@ const Comments = ({ blog_id, navigationID }) => {
 
   const { session, user } = useContext(GlobalContext);
 
-  const comment_url = `http://localhost:8000/api/blogs/${blog_id}/comments`;
+  const comment_url = `http://52.28.57.99:8000/api/blogs/${blog_id}/comments`;
 
   const handleWriteComment = (e) => {
     setComment(e.target.value);
