@@ -14,7 +14,7 @@ const Results = () => {
     console.log(nextPage);
 
     const searchQuery = window.localStorage.getItem('searchQuery');
-    fetchBlogs(`http://52.28.57.99:8000/api/blogs/?search=${searchQuery}`);
+    fetchBlogs(`https://52.28.57.99:8000/api/blogs/?search=${searchQuery}`);
 
     //FETCH BLOGS ONLY IF THERE ARE FOLLOWING PAGES
     // eslint-disable-next-line react-hooks/exhaustive-deps

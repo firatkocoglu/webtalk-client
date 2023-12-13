@@ -10,7 +10,7 @@ const Comments = ({ blog_id, navigationID }) => {
 
   const { session, user } = useContext(GlobalContext);
 
-  const comment_url = `http://52.28.57.99:8000/api/blogs/${blog_id}/comments`;
+  const comment_url = `https://52.28.57.99:8000/api/blogs/${blog_id}/comments`;
 
   const handleWriteComment = (e) => {
     setComment(e.target.value);
@@ -33,7 +33,7 @@ const Comments = ({ blog_id, navigationID }) => {
   const postComment = async () => {
     try {
       await axios.post(
-        `http://localhost:8000/api/blogs/${blog_id}/comments/`,
+        `https://localhost:8000/api/blogs/${blog_id}/comments/`,
         {
           comment: comment,
         },
@@ -55,7 +55,7 @@ const Comments = ({ blog_id, navigationID }) => {
   const deleteComment = async (comment_id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8000/api/blogs/${blog_id}/comments/${comment_id}`,
+        `https://localhost:8000/api/blogs/${blog_id}/comments/${comment_id}`,
         {
           withCredentials: true,
           headers: {

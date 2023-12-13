@@ -34,7 +34,7 @@ const NewPassword = () => {
       if (newPassword === confirmPassword) {
         setPassword({ newPassword: '', confirmPassword: '' });
         const response = await axios.post(
-          'http://52.28.57.99:8000/auth/users/reset_password_confirm/',
+          'https://52.28.57.99:8000/auth/users/reset_password_confirm/',
           {
             uid: uid,
             token: token,

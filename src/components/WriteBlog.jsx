@@ -41,7 +41,7 @@ const WriteBlog = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        'http://52.28.57.99:8000/api/categories/',
+        'https://52.28.57.99:8000/api/categories/',
         {
           withCredentials: true,
           headers: { 'X-CSRFToken': session },
@@ -57,7 +57,7 @@ const WriteBlog = () => {
     console.log(content);
     try {
       const response = await axios.post(
-        'http://52.28.57.99:8000/api/blogs/',
+        'https://52.28.57.99:8000/api/blogs/',
         {
           user_id: user.id,
           title: title,
@@ -90,7 +90,7 @@ const WriteBlog = () => {
     console.log(content);
     try {
       await axios.post(
-        'http://52.28.57.99:8000/api/drafts/',
+        'https://52.28.57.99:8000/api/drafts/',
         {
           user_id: user.id,
           title: title,
