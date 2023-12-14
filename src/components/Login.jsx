@@ -7,7 +7,7 @@ import Cookie from 'universal-cookie';
 import { HiUser } from 'react-icons/hi2';
 import { RiLockPasswordFill } from 'react-icons/ri';
 
-const login_url = 'http://54.93.240.94:80/api/login/';
+const login_url = 'https://18.199.47.215:443/api/login/';
 
 //LOGIN VIEW
 const Login = () => {
